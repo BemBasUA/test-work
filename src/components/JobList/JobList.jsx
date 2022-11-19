@@ -19,7 +19,7 @@ export const JobList = ({ jobs, state }) => {
                 src={job.pictures[0] + `?random=${increment}`}
                 alt="job_picture"
               />
-              <Link to={`details/${job.id}`} state={state}>
+              <Link to={`details/${job.id}`} state={state} className="font-proximaNova font-normal">
                 {job.title}
               </Link>
               <button type="button">

@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: "ProximaNova";
+    src: local("ProximaNova"),
+     url("./fonts/ProximaNova/ProximaNova-Light.ttf") format("truetype");
+    font-weight: 300;
+    }
+    @font-face {
+        font-family: "ProximaNova";
+        src: local("ProximaNova"),
+         url("./fonts/ProximaNova/ProximaNova-Regular.ttf") format("truetype");
+        font-weight: 400;
+        }
