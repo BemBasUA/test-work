@@ -14,17 +14,16 @@ export const JobGallery = () => {
 
   const getValidatedJobs = async () => {
     const response = await getJobs();
-    const validatedJobs = response;
-    // const validatedJobs = await Promise.all(
-    //   response.map(async (job) => {
-    //     const location = await getCityLocation(
-    //       job.location.lat,
-    //       job.location.long
-    //     );
-    //     job.location = location;
-    //     return job;
-    //   })
-    // );
+    const validatedJobs = await Promise.all(
+      response.map(async (job) => {
+        const location = await getCityLocation(
+          job.location.lat,
+          job.location.long
+        );
+        job.location = location;
+        return job;
+      })
+    );
     return validatedJobs;
   };
 
